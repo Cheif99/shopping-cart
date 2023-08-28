@@ -1,0 +1,30 @@
+
+.outfit-list{
+    flex-basis:calc(25%-10px);
+    text-align:center;
+
+}
+
+.outfit-name, .outfit-price{
+    text-align:center;
+    /* background-color: blue; */
+}
+img{
+    width:270px;
+    height: 400px;
+    object-fit: cover;
+    
+}
+
+.outfit-list {
+    margin-top: 100px;
+}
+
+.add-to-cart{
+    text-align:center;
+    width:100%;
+    height: 50px;
+    background-color: blueviolet;
+    color:white;
+    border: none;
+}
