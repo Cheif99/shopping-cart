@@ -1,5 +1,18 @@
 .cart {
-    
-    margin-top: 180px;
-    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px
+}
+
+.cart h1 {
+    text-align : center;
+    left: 350px;
+    position:relative
+}
+
+.button{ 
+    display: flex;
+    gap: 20px;
 }

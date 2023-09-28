@@ -1,0 +1,23 @@
+.cart-item {
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    margin: 30px;
+}
+
+.cart-item img {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+   
+}
+
+.cart-item-desc {
+    width: 100%;
+    font-size: 30px;
+    position: relative;
+    left: 23%;
+}

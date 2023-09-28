@@ -17,6 +17,17 @@ const HomeContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState(defaultCart())
 
+    const totalCartAmount = () => {
+        let totalAmount = 0;
+        for (const item in cartItems) {
+            if(cartItems[item] > 0) {
+                let itemInfo = outfits.find((outfit) => outfit.id === +(item));
+                totalAmount += cartItems[item] * itemInfo.price
+            }
+        }
+        return totalAmount;
+    }
+
     const addToCart = (itemId) => {
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId] +1}))
     }
@@ -25,7 +36,11 @@ const HomeContextProvider = (props) => {
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId] -1}))
     }
 
-    const contextValue = {cartItems, addToCart, removeFromCart};
+    const newCartCounter = (newAmount, itemId) => {
+        setCartItems((prev) => ({...prev, [itemId]: newAmount}))
+    }
+
+    const contextValue = {cartItems, addToCart, removeFromCart, newCartCounter, totalCartAmount};
 
     console.log(cartItems)
     return ( 
